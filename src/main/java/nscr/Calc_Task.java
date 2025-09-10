@@ -19,6 +19,13 @@ public class Calc_Task {
         if (operator.equals("wurzel")) {
             ergebnis = root(zahl1);
 
+        } else if (operator.equals("fibonacci")) {
+            Fibonacci.fibonacci();
+        } else if (operator.equals("caesar")) {
+            Caesar_Cypher.caesar_Cypher();
+        } else if (operator.equals("realcalc")) {
+            Calculator calculator = new Calculator();
+            calculator.startup();
         } else {
             System.out.println("Gebe deine zweite Zahl an: ");
             zahl2 = scanner.nextInt();
@@ -48,6 +55,7 @@ public class Calc_Task {
         if (a.equals("y")) {
             afg();
         } else if (a.equals("n")) {
+            scanner.close();
             exit(1);
         } else {
             System.out.println("Bitte gebe ein 'y' oder 'n' an.");
